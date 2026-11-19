@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coy Discover
+
+A swipe-based profile discovery and mutual matching application built as part of the Coy SDE Intern Assignment.
+
+## Features
+
+- Discover profiles through a swipe-based interface.
+- Like or pass on profiles using buttons or drag gestures.
+- Smooth card animations and swipe feedback.
+- Mutual matching when both users like each other.
+- Matches page displaying all mutual matches.
+- Full profile popup with bio, location, and interests.
+- Previously swiped profiles are not shown again.
+- Persistent swipe and match data using SQLite.
+- Privacy-focused matching logic that never reveals one-sided likes.
+
+## Tech Stack
+
+- **Frontend:** Next.js, React, TypeScript, Tailwind CSS
+- **Backend:** Next.js API Routes
+- **Database:** SQLite with better-sqlite3
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/deepakpandit31/coy-discover.git
+cd coy-discover
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The SQLite database is created and seeded automatically when the application initializes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## API Endpoints
 
-## Learn More
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/feed` | Fetch profiles not yet swiped on |
+| POST | `/api/swipe` | Record a like or pass and check for a mutual match |
+| GET | `/api/matches` | Fetch mutual matches |
 
-To learn more about Next.js, take a look at the following resources:
+## Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The application uses a single demo user and 30 seeded mock profiles. Some profiles have already liked the demo user to demonstrate mutual matching.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Assignment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built independently as a standalone implementation of the Discover tab for the Coy SDE Intern Assignment.
