@@ -1,0 +1,17 @@
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="16" fill="#ec4899"/>
+
+  <text
+    x="20"
+    y="48"
+    font-family="Arial, sans-serif"
+    font-size="53"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="#000000"
+  >c</text>
+
+  <rect x="38" y="39" width="10" height="10" fill="#ffffff"/>
+</svg>
